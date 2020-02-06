@@ -1,0 +1,537 @@
+               Smart Stick for Blind People 
+Abstract — The life of blind and visually impaired people is very different. They face many 
+problems in moving from one place to another. Since they cannot see, they often get hit by 
+objects in roads like poles, walls, cars, people etc. as a result they may severely injured. It may 
+leads to face humiliation and lose confidence in themselves. There are chances that they can 
+get lost. In such cases, it is very difficult for their family members to find them. Even though 
+they are provided with stick, in which they can identify the object by tapping it. It is not much 
+helpful for them in order to avoid obstacles, the Smart Stick for Blind people in which visually 
+impaired person can be able to detect the object from a further distance and they could avoid it 
+using ultra sonic sensors, and if they are lost, using GPRS and GSM modules their family 
+members can track them. Blind stick is an innovative stick designed for visually disabled people 
+for improvednavigation. We here propose an advanced blind stick that allows visually 
+challenged people to navigate with ease using advanced technology. The blind stick is 
+integrated with ultrasonic sensor along with motors. Our proposed project first uses ultrasonic 
+sensors to detect obstacles ahead using ultrasonic waves. On sensing obstacles the sensor 
+passes this data to the microcontroller. The microcontroller then processes this data and 
+calculates if the obstacle is close enough. If the obstacle is not that close the circuit does 
+nothing. If the obstacle is close tmicrocontroller sends a signal to rotate the motorwhich in turn 
+rotates the wheel when obstacle is detected so that the blind will not get frustrated due to 
+continuous alarming sound of buzzer and he/she can navigate easily along the path. The system 
+has one more advanced feature integrated to help the blind find their stick if they forget where 
+they kept it. A wireless RF based remote is used for this purpose. Pressing the remote button 
+sounds a buzzer on the stick which helps the blind person to find their stick. Thus this system 
+allows for obstacle detection as well as finding stick if misplaced by visually disabled people. 
+ 
+ 
+         Introduction 
+
+    Visually impaired people are the people who can't identify smallest detail with healthy eyes. 
+ Those who have the visual acuity of 6/60 or the horizontal extent of the visual field with both 
+ eyes open less than or equal to 20 degrees, these people are considered blind [1]. Such people 
+ are in need of aiding devices for blindness related disabilities. As described in [2] 10% of blind 
+ have  no  usable  eyesight  at  all  to  help  them  move  around  independently  and  safely.  The 
+ electronic  aiding   devices    are   designed    to   solve    such    issue. 
+ To record information about the obstacles presence in a road, active or passive sensors can be 
+ used. In case of a passive sensor, the sensor just receives a signal. It detects the reflected, 
+ emitted or transmitted electro-magnetic radiation provided by natural energy sources. In case 
+ of using an active sensor, the sensor emits a signal and receives a distorted version of the 
+ reflected  signal.  It  detects  reflected  responses  from  objects  irradiated  with  artificially 
+ generated energy sources. These kind of active sensors are capable of sensing and detecting 
+far and near obstacles. In addition, it determines an accurate measurement of the distance 
+between the blind  and the obstacle. Overall, in the obstacle detection domain, 
+four different types of active sensors may be used: infrared, laser, ultrasonic, in addition to 
+radar sensors. 
+   Bat K Sonar [3], Smart Cane [4], Smart vision [5], Guide Cane [6], use ultrasonic sensors 
+or laser sensors to detect obstacles in front of blind by transmitting the wave and reception 
+of  reflected  waves.  It  produces  either  an  audio  or  vibration  in  response  to  detected 
+obstacles to warn blind. Systems like vOICe [7], SoundView [8], SVETA [9] and CASBLIP [10], 
+use  single  camera  or  stereo  video  cameras  mounted  on  a  wearable  device  to  capture 
+images. These captured images are re-sized, processed further and converted to speech, 
+audio, musical sounds or vibrations. In such systems, the frequency of warning sound signal 
+is correlated with the orientation of pixels. Some advanced systems use Global Positioning 
+System (GPS) integration with the main system. It's also noteworthy that GPS receiver is 
+useful for understanding the current location of the subject and nearby landmarks. Some 
+solutions are already available in the market such as: UltraCanne [11], Isonic [12], and 
+Teletact [13] and others [14]. These products help blind people by collecting information 
+through  sensors  and  then  transmitting  recommendations  through  vibration  or  sound 
+message to the user. 
+   These solutions still have many disadvantages for  example; 
+   They can’t detect obstructions that are hidden but very dangerous for the blind such as 
+downward  stairs,  holes  etc.  Usually,  the  feedback  information  comes  out  as  either 
+vibration or sound signals. Thus, these systems communicate their recommendations to 
+the user through sound or frequency vibration. 
+   Consequently, training is then necessary to help the user understand the signals and to 
+react to them in real time. However, such training is sometimes more expensive than the 
+product  itself.  Therefore,  users  can’t  afford  it  [15].  Otherwise,  the  information  is 
+transmitted as a sound it may be embarrassing for the blind person in public. 
+   In our work we tried to overcome some of disadvantage: 
+   •  We designed stick to detect obstacles and its able to recognize and speak aloud the 
+      upward and downward stairs or puddles as shown in Fig. 1. 
+   •  The  training  of  our  product  isn’t  as  expensive  as  training  in  other  product.  Our 
+      training is just description of stick component and usage position. 
+   •  We use two facilities to transmit information to the blind. We integrated vibration 
+      motor  in  the  hand  of  stick  and  speech  warning  message  kit  that  preserving  it’s 
+      natural dimension to keep it user friendly. 
+   •  With  aid  of  earphone  the  speech  warning  message  kit  is able to speak aloud 
+      warning message to the blind instead  of  incomprehensible  sound  and  public 
+      embarrassment. 
+       
+      •    We achieved very fast response  time calculated as 39 ms in average distance 
+      ≤400 cm before hitting the obstacles. Regarding ease of use and independence of 
+      blind we added a facility of easy search to the stick in  the form of remote (location 
+       or positioning of the stick). 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                        Stone 
+ 
+ 
+.                                                                        Puddle                                         
+ 
+ 
+ 
+                       Figure 1.  Smart stick detects obstacles in front of the blind 
+ 
+
+                      II. RELATED WORK 
+ A. Advanced Electronics Based Smart Mobility Aid for the 
+Visually Impaired Soceity 
+ The realm of electronics is growing rapidly. Advanced electronics are employable in assisting the visually 
+impaired society in various ways. According to World Health Organization (WHO) approximately 285 
+million people are blind. Major researches have been under consideration on developing a smart stick 
+for seeking a smoother routine life and welfare towards the blind society. This paper proposes and 
+analyses a brand new thought in eliminating the stick and mount these sensors on the visually 
+handicapped person body itself [4]. B. Real-time Dangling Objects Sensing: A Preliminary Design of 
+Mobile Headset Ancillary Device for Visual Impaired This analysis planned a mobile Real-time Dangling 
+Objects Sensing (RDOS) prototype, which found on the cap to sense any front barrier. This device utilizes 
+low cost un-hearable sensing element to act as another complement eye for blinds to know the front 
+hanging objects. The RDOS device will dynamically regulate the sensor’s front angle that's trusted the 
+user’s body height and promote the sensing accuracy. Two major needed algorithms to measure the 
+height-angle activity and un-hearable sensing element alignment and planned unit area. The analysis 
+team additionally integrated the RDOS device with mobile automation devices by human action and 
+Bluetooth to record the walking route. 
+ 
+ 
+ 
+C. Assistive Infrared Sensor Based Smart Stick for Blind people- 
+ In this paper authors tend to propose a smart stick with lightweight weight, low cost, user 
+friendly, quick response and low power consumption and stick supported by infrared 
+technology. A combination of infrared sensors will observe stair-cases and different obstacles 
+presence within the user path. The experimental results gives good accuracy and therefore the 
+stick is ready to observe all of obstacles 
+ 
+D. Design and Implementation of Mobility Aid for Blind People. 
+ The proposed system is a jacket which will have sensors mounted on it. There will be five 
+sensors mounted on the jacket. One sensor detects potholes or stairs. The other obstacle near 
+head. The three sensors are used to detect obstacles in front, right and left direction. The user 
+is notified about the obstacle through specific voice commands which are stored in a Micro SD 
+card. These instructions are played by the microcontroller and are heard by the user through 
+the headphones 
+ 
+ 
+                
+                   II. Proposed System 
+ 
+We have many reasons to design smart stick for blind; firstly, the blind to feel free, isn't 
+surrounded by wires as in belt and its content. Secondly, is easy to use because it is familiar and 
+affordable. Thirdly, to be able to detect obstacles that exist on the ground (this is not available 
+in glasses), which he walks indoor and outdoor is faced by obstacles such as stairs, puddles and 
+sidewalks.  The smart stick, as shown in Fig. 2, is basically an embedded system integrating the 
+following: pair of ultrasonic sensor to detect obstacles in front of the blind from ground level 
+height to head level height in the range of 400 cm a head, infrared sensor to detect upward and 
+downward stairs. Ultrasonic sensors and infrared sensor collect real time data and send it to 
+18F46K80 microcontroller. After processing this data, the microcontroller actives the motor to 
+vibrate and invokes the right speech warning message stored in ISD 1932 through an earphone. 
+Water sensor to detect water spreads, rechargeable battery to power the circuits.  
+ 
+                                                                                                                                        
+ 
+ 
+ 
+ 
+ 
+ 
+                    Microcontroller & sound kite 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 2. Design of the smart stick Smart stick detects obstacles in front 
+of the blind. 
+  
+       
+ 
+ Figure 3. Block diagram of electronic smart stick. 
+ 
+                          A. Sensors  
+The  selection  process  of  appropriate  sensor  depends  on several  factors  such as,  
+cost,atmospheric condition,  kind  of obstacle  to  be  detected,  detection  range,  and  the  
+desired precision  of  measurements  collected  information  and  its transmission frequency as 
+shown in Table I.  We used a combination of 2 types of sensors infrared and ultrasonic for the 
+following reasons:  
+ 
+a)  Infrared sensor recognize small obstacle but with less accuracy  than  laser  sensors.However  
+using  laser  sensor  is costly which contradicts our aim in obtaining affordable aiding devices. 
+They perform almost the same  within 2 meter. 
+b)  Ultrasonic sensor work well for close obstacles unlikelaser one, when an object is so close 
+the laser sensor (less than 15cm) can’t  get an  accurate reading.Moreover,  it  should  be noted  
+that  radar  sensors  can  easily  detect  near  and  far obstacles with equal perform once, but 
+their medium accuracy doesn't allow them detecting small obstacles. 
+ 
+ 
+TABLE I. GENERAL CHARACTERISTIC OF SOME ACTIVE SENSORS 
+ 
+                Laser           Infrared       Radar           Ultrasound 
+Principle       Transmission    Transmission   Transmission    Transmission 
+                and reception of and reception of   and reception  and reception of  
+                light wave      pulse of IR    of microwave    acoustic  
+                                light                          waves 
+                                                                
+Range           SLR:15cm to 120 From 20        About 150       From 3 cm  
+                cm              cm to 15cm     to200m          to 10 m 
+                LLR: About  10                                  
+                to 50m 
+Beam width                      fairly thin    Depended on     Wide 
+                Narrow                         size of  
+                                               antenna 
+                                                
+Atmospheric                                    Affected        Not  
+                Affected        affected                       affected 
+condition                                                       
+Cost            Very High       LOW            HIGH            LOW 
+                       SLR: short laser range, LLR: Long laser range 
+ 
+Infrared sensor chosen has a  detection range  distance that goes from 20 to 200 cm, a 
+resolution of 0.5 cm, a frequency of 26.3 Hz and an analogical output that goes from 0 to 5 V.   
+Ultrasonic sensor used 40 kHz transmission signal. The 40 kHz frequency  is produced by a  
+transmission sensor of two-centimeter  diameter;  it  can  generate  2.4644  beams  of  
+narrowness.  This  is a  reasonable  size to  be  installed  in  the stick.  We use the infrared 
+sensor to detect upward and downward stairs because  the sensor  spot is  roughly 6 cm. This  
+feature enables  the  user to  identify  precisely,  any kind  of  stairs  in front of him.We  use  a  
+pair  of  ultrasonic  sensor.  An  upper  one  at  a height 90 cm to detect upper obstacles and 
+another sensor at a height 30 cm to detect low obstacles.  Detection using ultrasonic sensor is 
+based on two factors:  
+ 
+• Time of flight (TOF), the amount of delay between the emission of a sound and the arrival of 
+an echo depending on the distance of an obstacle, which is directly proportional to the distance 
+ 
+• Beam size: Obstacle size is depending on amount of reflected wave. Obstacles whose 
+dimensions are larger than the beam size, all of the sound waves will be reflected to receiver. If 
+the obstacle size small as compared to the beam size, the part of the ultrasonic sound wave will 
+be reflected to the receiver and the rest will be lost as shown in Fig. 4. The speed at which 
+sound travels depends on the medium it passes through. Broadly, the speed of sound is 
+proportional to the square root of the ratio between the stiffness of the medium and its 
+density. The speed of sound also changes with 
+ 
+the atmospheric conditions. All obstacles reflect some part of the wave through. The amplitude 
+of the wave reflected is relatively proportional to how much available surface there is on the 
+obstacle, concerning coherent reflection. Also, surface area, shape and orientation, are major 
+factors contributing to the strength of the reflected signal. 
+ 
+ 
+
+
+                                                                              
+Figure 4.    Small and large obstacle detection.   
+     B. PIC Microcontroller 18F46K80 
+ Researchers in [17, 18] used the microcontroller 16F877A. It has 3 disadvantages (1) it has no 
+internal oscillator so we will need an external crystal as a clock source. (2) It has memory 256 
+bytes of EEPROM. (3) It has 8 channels of 10-bit Analog-to-Digital (A/D) converter. The 
+microcontroller 18F46k80 (MCU) [16] used to control the embedded system. The PIC 
+microcontroller we used is simplified computer with a processor, memory and support for 
+peripherals. The PIC simply runs the program in its memory when it is turned on and it doesn’t 
+have an operating system. It has 200 ns instruction execution, 1024 bytes of EEPROM data 
+memory, self-programming, an 2 ICD, 2 Comparators, 11 channels of 10-bit Analog-to-Digital 
+(A/D) converter, 1 capture/ compare/ PWM functions, a synchronous serial port that can be 
+configured as either 3-wire SPI or 1- 12wire C bus, a USART, and a Parallel Slave Port. Regulator 
+LM7805 used to regulate the volt to +5V which input to microcontroller if the input voltage 
+exceeds +5V. As shown in Fig. 5. When the MCU is started, it produces a 40 kHz wave with the 
+duration of 300μs. It generates the pulse that will drive the ultrasonic emitter. After sending the 
+pulse, the ADC of MC will read and convert the received wave from each ultrasonic receiver 
+into a digital form. If the ultrasonic sensor received the signal, MC will calculate the distance. If 
+the infrared sensor received the signal, MC will calculate average of the signal shape and 
+amplitude. Accordingly, MC invokes the right speech warning message through an earphone. 
+The proposed system was simulated using Proteus software (Simulation Program) [19] as 
+shown in Fig. 6. The program code was written using C language. 
+ 
+                                 
+          
+          
+Figure 5. Flowchart of the proposed system. 
+          
+          
+          
+          
+          
+          
+Figure 6. The whole circuit design using Proteus simulation.   
+            
+          
+    
+   C. Speech Warning Message  
+Many researchers [5, 6, 14] used vibration array or buzzer based audio frequency clips for 
+announcing any detection of obstacles. The proposed stick uses pre-recorded speech messages 
+for conveying any detection of obstacle. It uses ISD1932 [20] circuit that contains a multiple-
+message recording and playback device. This circuit can record up to 64 
+seconds per message. It includes microphone inputs and speaker outputs as shown in Fig. 7. 
+ 
+                                                                                      
+             Figure 7. Voice record circuit in direct mode 
+In the proposed system, we have recorded sixteen different speech warning messages 
+depending on the distanceas to alert the user. We have added a capacitor of 4.7 µF and an 
+external resistor of 100KΩ necessary to decrease recording duration to 21.2sec per message. 
+ 
+                   D. Water Sensor 
+ Water sensors available are used to detect water levels inside tanks and very expensive. Our objective is 
+to detect water existence regardless its level. So we used a costless alternative. Two wire probes are 
+shown in Fig. 8; they fit at the bottom of the stick to sense obstacle like water pits, puddles and water 
+spread. Once wires touch water, the circuit is shorted, this interrupts the microcontroller, activates the 
+vibration motor and play warning message saying: "Attention there is water". 
+ 
+ 
+
+
+                                                                                        
+       
+                                                 Figure 8. Water sensor 
+                  E. Vibration Motor  
+This is the type of DC vibration motors used in mobile phones. It requires a voltage supply of 3V 
+to 5V with current around 125 mA. This type of motors can be programmed to control its speed 
+by using the PWM (Pulse Width Modulation) method. The PWM signal is generated from the 
+TMR2 timer via interrupt control on RC2 and RC1 pins to gate this PWM to active the vibration. 
+The diameter of the motor is 0.5 cm and the thickness is 2.5mm. 
+ 
+                    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+  F. Calling the Stick 
+ We used FM “frequency modulation” wireless communication to help the blind person to find 
+the stick if it is far from him. Fig. 9 shows an RF transmitter that generates radio frequency 
+waves in its circuits, and to this 'carrier signal', it adds the information part by modulating the 
+carrier signal. This composite signal (carrier plus information) is then fed to an antenna. An RF 
+receiver receives the signal at the same frequency from the atmosphere, by altering the Electric 
+and Magnetic fields from its own antenna. The receiver circuits then strip the information part 
+of the signal from the carrier part, and amplify this to a useful level for audio. 
+ 
+                                                                                     
+Figure 9. RF transmitter and receiver 
+ 
+III. Results and Discussion Ultrasonic sensors, infrared sensor, PIC 18F46K80 and ISD1932 are 
+tested individually as well as integrated. As ultrasonic sensors work on principle of echo, 
+studying of its reflection on different obstacle is very important. The measurement cycle starts 
+with microcontroller transmitting the 10µs high level pulse to the sensor trigger pin to start 
+ranging (T1), then the sensor will send out ultrasonic signal with 40 kHz and 450µs (T2) and 
+then wait to capture the rising edge output by echo port (T3) from 150µs: 25ms, depending on 
+measured distance as shown in Fig. 10. In case of no obstacle (no signal reflected) it waits 38ms 
+before it restarts transmission. 
+ 
+                                          
+                            
+                                                                                 
+ 
+                            Figure 10. Timing diagram 
+ 
+ 
+ 
+ 
+Ultrasonic distance sensor uses time of flight (TOF) to detect obstacle - the output is a digital 
+pulse which length is the time it takes for the sound to reach the target and return. 
+ 
+Several experiments were done on obstacles at different distance and the average TOF results 
+are shown in Fig. 11. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                       
+ Figure 11. Time of flight vs measured distance of ultrasonic 
+sensor 
+ 
+    Distance (cm)     Analog value          Analog value                     error 
+                     calculated (mV        measured (mV) 
+
+                                                     24                      1 mv 
+         5                      
+                              25 
+                              50                    48.8                    1.8 mv 
+         10 
+         20                  100                    97.6                    2.4 mv 
+
+         30                  150                    146.4                   3.6 mv 
+
+         40                  200                    195.3                   4.7 mv 
+
+         50                  250                   244.15                  5.85 mv 
+
+         75                  375                    366                      9 mv 
+
+        100                  500                    489                     11 mv 
+
+        150                  750                    732                     16 mv 
+
+        200                  1000                   976.6                  23.4 mv 
+
+        250                  1250                  1220.7                  29.3 mv 
+
+        300                  1500                  1464.9                  35.1 mv 
+
+        350                  1750                   1709                    41 mv 
+
+        400                  2000                  1953.2                  46.8 mv 
+
+
+       TABLE II. RESULT OF ULTRASONIC SENSOR COMPARISON 
+                                       
+                                       
+We tested how the ultrasonic sensors performance in lab compared to simulated calculation. 
+  TABLE II and Fig. 12 are present comparison of the ultrasonic sensor analog voltage value 
+ between the calculation value and measurement value. Thereafter the error is calculated in 
+  small range 5:50 cm error is 1– 6 mv, medium range 75:200 cm error is 9 – 23 mv and far 
+                       range 250:400 cm error is 30 – 47 mv 
+                                       
+                                       
+                                       
+                                       
+                                       
+                                                   
+Figure 12. Difference between calculated and measured value 
+                    TABLE III. COMPARISON OF OTHER DEVICES 
+ 
+                                                                              
+                                                                  Stairs & 
+          Devices            Detection    Time        Power        Water       Porta
+                              Range     Response   Consumption     Detectio     ble 
+                                                                   n 
+                                                                              
+         Proposed              High        Fast        Low           Yes        Yes 
+          System 
+                                                                              
+  Vibration and Voice          Low       medium        Low           No         Yes 
+   Operated Navigation 
+   System for Visually 
+   Impaired Person 
+                                                                              
+ A Smart Infrared            Medium        Fast        Low           No         yes 
+         Microcontroller-
+         Based Blind 
+         Guidance System 
+                                                                              
+  Ultrasonic Spectacles and    High        Fast        Low           No         yes 
+    Waist-belt for Visually 
+    Impaired and Blind 
+    Person 
+
+ 
+ 
+ 
+To evaluate the performance of this stick, testing is performed in real world, by actual 
+beneficiaries (trained and untrained) blind people. Two experiments have been carried out 
+using a number of obstacles. The experiment was conducted by six blind people from which 
+two were trained on using the stick and four were not. During experiment, a blind person was 
+asked to walk through the testing area where different type of obstacles has been placed within 
+15 meter range. The user’s walking speed is recorded. Time taken by trained and untrained for 
+successfully walking through the obstacles is measured as shown in Fig. 13. Then we calculated 
+the average speed of trained users to be 0.80 m/s and untrained users to be 0.41 m/s. In 
+comparison with the traveling speed of the sighted people be (1.4 m/s). This result shows that 
+training of the user reflected in gaining twice traveling speed and also increased the user trust 
+in avoiding obstacles in free path. 
+ 
+ 
+ 
+                                                                                   
+Figure 13. Performance and accuracy of the smart stick 
+ 
+The proposed system should be compared with available and up to date technology. Several 
+parameters should be considered to evaluate the performance of the proposed guidance 
+system such as the range of detection, time response and power consumption. 
+ 
+ 
+• The first parameter is the range of detection. A tool which can find obstacles throughout 0-2m 
+can be considered as a low range device, 2-4m as medium range, while higher than 4m is 
+considered as high range. 
+ 
+ • The second parameter is the response time, and a system sensing and responding 0–100ms is 
+regarded as fast, 100–200ms medium and higher than 200ms as slow.  
+ 
+• The third important parameter is the power consumption of the system and how long it will 
+stay working without the need to recharge. The following ratings are considered: consumption 
+of an electrical power of 0 0.5W is regarded as low power, 0.5–1W as medium consumption, 
+and higher than 1W as high consumption.  
+ 
+• The device is portable if it is light in weight and the user can easily wear for extended period 
+of time otherwise it is considered non-portable 
+ 
+ 
+. We compared our performance with last 5 years literature with 3 devices. Vibration and Voice 
+Operated Navigation System for Visually Impaired Person [17] consists of three ultrasonic 
+sensors, PIC microcontroller16F877A using the feedback through vibration and voice alerts the 
+user if any obstacle is around and within 70cm, A Smart Infrared Microcontroller-Based Blind 
+Guidance System [18] consists of three infrared sensor, microcontroller 16F877A using 
+feedback through vibration and tune speakers warn the user if any obstacles is around within 2 
+m, Ultrasonic Spectacles and Waist-belt for Visually Impaired and Blind Person [21] consists of 
+five ultrasonic sensors, APR9600 audio recording and playback flash memory, earphone with 
+AT89S52 microcontroller. The comparison is shown in TABLE III. 
+ 
+ 
+ 
+
+                    IV. Conclusion  
+The Smart Stick acts as a basic platform for the coming generation of more aiding devices to 
+help the visually impaired to be more safe. It is effective and afford. It leads to good results in 
+detecting the obstacles lying ahead of the user in a range of four meters, detecting stairs and 
+water pits. This system offers a low-cost, reliable, portable, lowpower consumption and robust 
+solution for navigation with obvious short response time. Though the system is hard-wired with 
+sensors and other components, it's light in weight. Further aspects of this system can be 
+improved via wireless connectivity between the system components, thus, increasing the range 
+of the ultrasonic sensor and implementing a technology for determining the speed of 
+approaching obstacles. While developing such an empowering solution, visually impaired and 
+blind people in all developing countries were on top of our priorities. 

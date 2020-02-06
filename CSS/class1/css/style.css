@@ -1,0 +1,54 @@
+body{
+
+    margin:0;
+ }
+
+h1{
+	color: red;
+}
+
+#colorme{
+	color: blue;
+}
+
+.fb{
+	color: magenta;
+}
+
+
+.test{
+	color: black;
+	height: 600px;
+	width: 600px;
+}
+
+
+#border{
+	border-width: 5px 15px 20px;
+	border-style: solid;
+	border-color: red black;
+	text-align: center;
+}
+
+#text_align{
+	text-align: justify;
+	font-size: 40px;
+	font-variant: small-caps;
+	text-decoration: overline;
+	font-family: 'Zhi Mang Xing', cursive;
+
+}
+
+#over{
+	font-size: 30px;
+	text-decoration: overline;
+	text-align: right;
+	font-family: 'Roboto Slab', serif;
+}
+
+.fa-key{
+	font-size: 50px;
+	color: red;
+}
+
+
