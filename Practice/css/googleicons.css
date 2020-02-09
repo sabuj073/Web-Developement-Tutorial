@@ -1,0 +1,25 @@
+#color{
+	color: red;
+}
+a{
+	text-decoration: none;
+	color: white;
+	background: black;
+	padding: 10px
+}
+a:visited{
+	color: green;
+	background: red;
+}
+a:hover{
+	color:red;
+	background: yellow;
+}
+a:active{
+	color:yellow;
+	background: red;
+}
+
+ul{
+	list-style-image: url("star.png");
+}

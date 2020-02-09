@@ -1,0 +1,53 @@
+body{
+	height: 800px;
+	background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)) ,url("../image/bg.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin:0;
+	padding: 0;
+}
+
+#a_color{
+	font-size: 50px;
+	text-decoration: none;
+	background: black;
+	color: white;
+}
+#a_color:visited{
+	background: yellow;
+	color: black;
+}
+#a_color:hover{
+	background: magenta;
+	color: red;
+}
+#a_color:active{
+	background: green;
+	color: red;
+}
+
+ul{
+	list-style-type: none;
+	float: right;
+	font-size: 30px;
+}
+ul li{
+	display: inline-block;
+	padding: 5px 10px;
+}
+
+ul li a{
+	text-decoration: none;
+	color: white;
+}
+
+ul li a:hover{
+	background: white;
+	color: black
+}
+
+#namao{
+	margin-top: 50%
+
+}
